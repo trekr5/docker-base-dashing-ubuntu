@@ -9,7 +9,7 @@ RUN apt-get update
 RUN apt-get install -y runit 
 CMD /usr/sbin/runsvdir-start
 
-RUN apt-get install -y vim less net-tools inetutils-ping curl wget make git telnet nmap socat dnsutils netcat tree htop unzip sudo software-properties-common
+RUN apt-get install -y vim npm less net-tools inetutils-ping curl wget make git telnet nmap socat dnsutils netcat tree htop unzip sudo software-properties-common
 
 RUN wget -O chruby-0.3.9.tar.gz https://github.com/postmodern/chruby/archive/v0.3.9.tar.gz && \
     tar -xzvf chruby-0.3.9.tar.gz && \
@@ -33,10 +33,11 @@ RUN gem install dashing -v 1.3.4 --no-rdoc --no-ri && \
 #Utilities
 
 #nodejs
-RUN apt-get install -y python-software-properties && \
-    add-apt-repository -y ppa:chris-lea/node.js && \
-    apt-get update
+#RUN apt-get install -y python-software-properties && \
+ #   add-apt-repository -y ppa:chris-lea/node.js && \
+  #  apt-get update
 
-RUN apt-get install -y nodejs
+#RUN apt-get install -y nodejs
+RUN npm install n -g 
 
 
