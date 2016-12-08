@@ -30,14 +30,8 @@ RUN gem install dashing -v 1.3.4 --no-rdoc --no-ri && \
     gem install bundler --no-rdoc --no-ri && \
     gem install elasticsearch --no-rdoc --no-ri
 
-#Utilities
 
 #nodejs
-#RUN apt-get install -y python-software-properties && \
- #   add-apt-repository -y ppa:chris-lea/node.js && \
-  #  apt-get update
-
-#RUN apt-get install -y nodejs
 RUN npm install n -g 
 
 
